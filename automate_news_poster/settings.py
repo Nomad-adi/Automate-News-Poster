@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p69gd$jq4&()g=1kfis1!&f)9&xty2ulzl!a7)6&n3=4ey=s7_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', #deployment
+     #deployment
 ]
 
 ROOT_URLCONF = 'automate_news_poster.urls'

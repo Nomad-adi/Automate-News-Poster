@@ -1,1 +1,0 @@
-web: gunicorn automate_news_poster.wsgi --log-file -
