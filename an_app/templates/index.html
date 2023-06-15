@@ -13,7 +13,7 @@ background-attachment: fixed;">
 
 <body>
     <div class="mb-10 top-1 w-screen flex flex-col justify-center items-center">
-        <img src="../static/image/logo.png" class="w-64 h-64" alt="Logo Image">
+        <img src="{% static "/image/logo.png"%}" class="w-64 h-64" alt="Logo Image">
     </div>
     <div class="bottom-6 m-auto relative" id="container" style="width:614px; height:700px;">
         <img src="" id="bg1" width="614px" height="700px">
@@ -31,11 +31,11 @@ background-attachment: fixed;">
     <script>
         var newbg = document.getElementById("bg1");
         var background = new Image();
-        background.src = "static/image/" + (Math.floor(Math.random() * (7)) + 1) + ".jpeg";
+        background.src = "{% static "/image/"%}" + (Math.floor(Math.random() * (7)) + 1) + ".jpeg";
         newbg.src = background.src;
         console.log(newbg.src);
     </script>
-    <script src="/static/js/h2c.min.js"></script>
+    <script src="{% static "/js/h2c.min.js"%}"></script>
     <script>
         function download() {
             html2canvas(document.getElementById("container"), { height: 614, width: 614 }).then(canvas => {
